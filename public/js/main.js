@@ -458,12 +458,13 @@ jQuery(document).ready(function ($) {
 
     // Function used to update the news list that is shown on screen.
     function fetchNews() {
+        console.log("Mise à jour des news");
         $.feedToJson({
             feed: feed,
             success: function (data) {
                 news = [];
-                for (var i in data.item) {
-                    var item = data.item[i];
+                for (var i in data.items) {
+                    var item = data.items[i];
                     news.push(item.title);
                 }
             }
