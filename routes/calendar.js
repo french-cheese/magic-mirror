@@ -64,9 +64,8 @@ function get_url(req, res, url, local) {
 		res.setEncoding('utf8');
 		res.on('data', function (chunk) {
 			console.log('BODY: ' + chunk);
-
-		}).done(function () {
 			res.render('blank', {content: chunk})
+
 		});
 	}).on('error', function (e) {
 		console.log("Got error: " + e.message);
