@@ -6,9 +6,10 @@ var lang = window.navigator.language;
 //change weather params here:
 //units: metric or imperial
 var weatherParams = {
-    'q':'Strasbourg,France',
+    'q':'Prague,CZ',
     'units':'metric',
-    'lang':lang
+    'lang':lang,
+    'APPID':'CHANGE ME'
 };
 
 var feed = 'http://www.dna.fr/rss';
