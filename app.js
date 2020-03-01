@@ -7,6 +7,7 @@ var routes = require('./routes');
 var user = require('./routes/user');
 var calendar = require('./routes/calendar');
 var controller = require('./routes/controller');
+var proxy = require('./routes/proxy');
 var express = require('express');
 var app = express();
 var http = require('http').Server(app);
@@ -38,6 +39,7 @@ app.get('/', routes.index);
 app.get('/calendar', calendar.calendar);
 app.get('/users', user.list);
 app.get('/controller', controller.controller);
+app.get('/proxy/quote', proxy.quote);
 
 var mirror = null;
 

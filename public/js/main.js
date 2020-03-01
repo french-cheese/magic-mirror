@@ -497,7 +497,7 @@ jQuery(document).ready(function ($) {
     (function getQuoteOfTheDay() {
         var today = getTodayDateFormatted();
         if (today != updatedDay) {
-            $.getJSON("http://api.theysaidso.com/qod", function (data) {
+            $.getJSON("http://localhost:3000/proxy/quote", function (data) {
                 console.log(data);
                 if (data.contents.quotes[0] !== null) {
                     data.contents.quotes[0].quote = "<i>&quot" + data.contents.quotes[0].quote + "&quot</i>";
@@ -512,7 +512,6 @@ jQuery(document).ready(function ($) {
                         getQuoteOfTheDay();
                     }, 2000);
                 }
-
             });
         }
     })();

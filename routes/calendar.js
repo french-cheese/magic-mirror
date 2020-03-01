@@ -7,7 +7,6 @@ var url = 'http://www.reddit.com/';
 //var url = 'D:\\Temp\\basic.ics';
 var local = 'D:\\Temp\\vic.ics';
 
-var fs = require('fs');
 var https = require('https');
 
 /*****************************************/
