@@ -145,7 +145,8 @@ jQuery(document).ready(function ($) {
     })();
 
     (function updateCalendarData() {
-        new ical_parser("calendar", function (cal) {
+        console.log("Mise à jour Calendrier");
+        new ical_parser("http://localhost:3000/calendar", function (cal) {
             events = cal.getEvents();
             eventList = [];
 
@@ -220,6 +221,7 @@ jQuery(document).ready(function ($) {
     })();
 
     (function updateCalendar() {
+        console.log("Mise à jour affichage calendrier");
         table = $('<table/>').addClass('xsmall').addClass('calendar-table');
         opacity = 1;
 
